@@ -11,13 +11,11 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	var names []string
-	var counts []int
+	counts := make(map[string]int)
 	for _, line := range lines {
-	    matched <= false
-	    for i, name := range names{
-	        if name == 
-	    }
+		counts[line]++
 	}
-	fmt.Println(lines)
+	for name, count := range counts {
+		fmt.Printf("Vote for %s: %d\n", name, count)
+	}
 }
