@@ -6,10 +6,10 @@ import (
 )
 
 func main() {
-	location := geo.Coordinates{
-		Latitude:  37.42,
-		Longitude: -122.08,
+	location := geo.Landmark{
+		Name: "The Googleplex",
 	}
-	fmt.Println("Latitude", location.Latitude)
-	fmt.Println("Longitude:", location.Longitude)
+	location.Latitude = 37.42
+	location.Longitude = -122.08
+	fmt.Println(location)
 }
