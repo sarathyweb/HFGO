@@ -3,7 +3,24 @@ package main
 import "fmt"
 
 type Litters float64
+type Milliliters float64
 type Gallons float64
+
+func LittersToGallons(l Litters) Gallons {
+	return Gallons(l * 0.264)
+}
+
+func MillilitersToGallons(m Milliliters) Gallons {
+	return Gallons(m * 0.0000264)
+}
+
+func GallonsToLitters(g Gallons) Litters {
+	return Litters(g * 3.785)
+}
+
+func GallonsToMilliliters(g Gallons) Milliliters {
+	return Milliliters(g * 3785.41)
+}
 
 func main() {
 	var carFuel Gallons
